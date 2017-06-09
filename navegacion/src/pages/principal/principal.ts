@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController } from 'ionic-angular';
 import { Pagina2Page } from '../index.paginas';
 
-/**
- * Generated class for the PrincipalPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @Component({
   selector: 'page-principal',
   templateUrl: 'principal.html',
@@ -16,7 +10,9 @@ export class PrincipalPage {
 
   pagina2:any = Pagina2Page;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {
@@ -25,6 +21,10 @@ export class PrincipalPage {
 
   navegarPagina(){
     this.navCtrl.push( Pagina2Page );
+  }
+
+  mostrarMenu() {
+    this.menuCtrl.toggle();
   }
 
 }

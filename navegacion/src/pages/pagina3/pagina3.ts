@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavParams } from 'ionic-angular';
+import { NavParams, NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-pagina3',
@@ -9,11 +9,20 @@ export class Pagina3Page {
 
   mutante:any={};
 
-  constructor( private navParams:NavParams) {
+  constructor( private navParams:NavParams,
+               private navController:NavController) {
     console.log( navParams );
 
     this.mutante = this.navParams.get("personaje");
 
+  }
+
+  irAtras(){
+    this.navController.pop();
+  }
+
+  irRoot(){
+    this.navController.popToRoot();
   }
 
 }

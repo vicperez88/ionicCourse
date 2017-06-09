@@ -13,4 +13,25 @@
     {{ mutante.poder }}
   </h3>
 
+  <button ion-button
+    block
+    color="primary"
+    (click)="irAtras()">
+    ir atras con event
+  </button>
+
+  <button ion-button
+    block
+    color="secondary"
+    (click)="irRoot()">
+    ir al root
+  </button>
+
+  <button ion-button
+    block
+    color="danger"
+    navPop>
+    ir atras
+  </button>
+
 </ion-content>
