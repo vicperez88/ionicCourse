@@ -1,0 +1,34 @@
+<!--
+  Generated template for the ListaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+
+    <ion-title>Lista</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list >
+    <ion-item *ngFor="let personaje of personajes"
+    (click)="irPagina(personaje)">
+
+      <ion-avatar item-start>
+        <img src='{{ personaje.img }}'>
+      </ion-avatar>
+
+      <h2>{{ personaje.nombre }}</h2>
+      <h3>{{ personaje.titulo }}</h3>
+
+    </ion-item>
+
+  </ion-list>
+</ion-content>
